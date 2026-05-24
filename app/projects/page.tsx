@@ -1,14 +1,39 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { HiArrowLeft } from "react-icons/hi2";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { ProjectCard } from "@/components/project-card";
 import { projects } from "@/lib/content";
+import { siteDescription, siteName } from "@/lib/seo";
 
-export const metadata = {
-  title: "Projects / Euel Villavicencio",
+export const metadata: Metadata = {
+  title: "Projects",
   description:
     "Full project archive for Euel Villavicencio across web, mobile, desktop, and developer utilities.",
+  alternates: {
+    canonical: "/projects",
+  },
+  openGraph: {
+    title: `Projects / ${siteName}`,
+    description:
+      "Explore Euel Villavicencio's apps, dashboards, APIs, mobile experiments, and developer utilities.",
+    url: "/projects",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: `${siteName} projects preview`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Projects / ${siteName}`,
+    description: siteDescription,
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function ProjectsPage() {

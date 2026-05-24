@@ -7,10 +7,12 @@ import { Hero } from "@/components/hero";
 import { Navbar } from "@/components/navbar";
 import { Newsletter } from "@/components/newsletter";
 import { Projects } from "@/components/projects";
+import { StructuredData } from "@/components/structured-data";
 
 export default function Home() {
   return (
     <main className="min-h-screen w-full bg-ink">
+      <StructuredData />
       <Navbar />
       <Hero />
       <Blog />
