@@ -31,13 +31,13 @@ export function About() {
               {[
                 ["Role", profile.role],
                 ["Location", profile.location],
-                ["Mode", "Dark mode by default"],
+                ["Current", "Zoho Developer"],
               ].map(([term, detail]) => (
-                <div key={term} className="bg-ink p-5">
+                <div key={term} className="bg-ink p-5 sm:p-6">
                   <dt className="text-[10px] uppercase tracking-[0.24em] text-muted">
                     {term}
                   </dt>
-                  <dd className="mt-4 text-sm font-bold uppercase text-white">
+                  <dd className="mt-4 text-sm font-bold uppercase leading-tight text-white">
                     {detail}
                   </dd>
                 </div>

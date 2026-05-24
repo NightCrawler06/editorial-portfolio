@@ -27,7 +27,7 @@ export function Footer() {
     <footer className="border-t border-line bg-ink px-4 py-6 text-[10px] uppercase tracking-[0.22em] text-muted sm:px-8 lg:px-16">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-          <a href="#top" className="-my-8 flex items-center gap-3 font-bold text-white">
+          <a href="#" className="-my-8 flex items-center gap-3 font-bold text-white">
             <BrandMark />
           </a>
 

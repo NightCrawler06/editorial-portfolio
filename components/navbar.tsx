@@ -39,6 +39,10 @@ export function Navbar() {
       return href;
     }
 
+    if (href === "#") {
+      return isHome ? href : "/";
+    }
+
     return isHome ? href : `/${href}`;
   }
 
@@ -46,6 +50,11 @@ export function Navbar() {
     setIsOpen(false);
 
     if (!isHome || !href.startsWith("#")) {
+      return;
+    }
+
+    if (href === "#") {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       return;
     }
 
@@ -75,12 +84,12 @@ export function Navbar() {
       >
         <div className="flex h-24 items-center justify-between border-b border-line">
           <Link
-            href={isHome ? "#top" : "/"}
+            href={isHome ? "#" : "/"}
             className="-my-6 flex items-center"
             onClick={(event) => {
               if (isHome) {
                 event.preventDefault();
-                handleSectionClick("#top");
+                handleSectionClick("#");
                 return;
               }
 
@@ -104,7 +113,7 @@ export function Navbar() {
             Navigate / 00
           </p>
           <div className="divide-y divide-line">
-            {[{ label: "Home", href: "#top" }, ...navItems].map(
+            {[{ label: "Home", href: "#" }, ...navItems].map(
               (item, index) => (
                 <Link
                   key={item.href}
@@ -160,12 +169,12 @@ export function Navbar() {
       <header className="sticky top-0 z-50 border-b border-line bg-ink/92 px-5 py-0 backdrop-blur-md sm:px-10">
         <nav className="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
           <Link
-            href={isHome ? "#top" : "/"}
+            href={isHome ? "#" : "/"}
             className="-my-6 flex items-center"
             onClick={(event) => {
               if (isHome) {
                 event.preventDefault();
-                handleSectionClick("#top");
+                handleSectionClick("#");
                 return;
               }
 

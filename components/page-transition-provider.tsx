@@ -14,6 +14,7 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
   const router = useRouter();
   const [isLeaving, setIsLeaving] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pendingHashRef = useRef<string | null>(null);
 
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
@@ -35,10 +36,23 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
       root.style.scrollBehavior = previousBehavior;
     };
 
+    const scrollToPendingHash = () => {
+      if (!pendingHashRef.current || pendingHashRef.current === "#") {
+        scrollToTop();
+        return;
+      }
+
+      const target = document.querySelector(pendingHashRef.current);
+
+      if (target) {
+        target.scrollIntoView({ behavior: "instant", block: "start" });
+      }
+    };
+
     scrollToTop();
     requestAnimationFrame(scrollToTop);
     const scrollTimeouts = [60, 160, 320].map((delay) =>
-      setTimeout(scrollToTop, delay),
+      setTimeout(scrollToPendingHash, delay),
     );
 
     return () => {
@@ -98,6 +112,7 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
     }
 
     event.preventDefault();
+    pendingHashRef.current = nextUrl.hash || null;
     setIsLeaving(true);
 
     if (timeoutRef.current) {
