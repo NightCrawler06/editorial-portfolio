@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { PageTransitionProvider } from "@/components/page-transition-provider";
 import {
   ogImageUrl,
@@ -113,6 +114,7 @@ export default function RootLayout({
       </head>
       <body>
         <PageTransitionProvider>{children}</PageTransitionProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
