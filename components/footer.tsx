@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { profile } from "@/lib/content";
+import type { IconType } from "react-icons";
+import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
+import { profile, socialLinks } from "@/lib/content";
 
 function BrandMark() {
   return (
@@ -13,14 +15,12 @@ function BrandMark() {
   );
 }
 
-const socials = [
-  { label: "YT", href: "#" },
-  { label: "FB", href: "#" },
-  { label: "IG", href: "#" },
-  { label: "GH", href: profile.github },
-  { label: "IN", href: "#" },
-  { label: "@", href: `mailto:${profile.email}` },
-];
+const icons: Record<string, IconType> = {
+  LinkedIn: FaLinkedinIn,
+  Instagram: FaInstagram,
+  GitHub: FaGithub,
+  Facebook: FaFacebookF,
+};
 
 export function Footer() {
   return (
@@ -31,19 +31,24 @@ export function Footer() {
             <BrandMark />
           </a>
 
-          <div className="flex flex-wrap gap-4 sm:gap-7">
-            {socials.map((social) => (
+          <div className="flex flex-wrap gap-2 sm:gap-3">
+            {socialLinks.map((social) => {
+              const Icon = icons[social.label];
+
+              return (
               <a
                 key={social.label}
                 href={social.href}
-                className="flex h-7 min-w-7 items-center justify-center border border-transparent text-muted transition hover:border-white hover:text-muted"
-                target={social.href.startsWith("http") ? "_blank" : undefined}
-                rel={social.href.startsWith("http") ? "noreferrer" : undefined}
+                className="group flex h-9 w-9 items-center justify-center border border-line text-muted transition hover:border-white hover:bg-white hover:text-ink"
+                target="_blank"
+                rel="noreferrer"
                 aria-label={social.label}
+                title={social.label}
               >
-                {social.label}
+                <Icon className="h-4 w-4 transition group-hover:scale-110" />
               </a>
-            ))}
+              );
+            })}
           </div>
         </div>
 

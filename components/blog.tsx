@@ -6,7 +6,7 @@ export function Blog() {
     <section id="blog" className="section-reveal border-b border-line bg-panel px-4 py-20 sm:px-8 lg:px-16">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          index="01 / 04"
+          index="01 / 05"
           eyebrow="Stack / Notes"
           title="The tools behind the work."
           description="A compact inventory of the technologies used across the portfolio, project gallery, and current Zoho role."

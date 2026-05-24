@@ -7,7 +7,7 @@ export function Activity() {
     <section id="experience" className="section-reveal border-b border-line px-4 py-20 sm:px-8 lg:px-16">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          index="04 / 04"
+          index="04 / 05"
           eyebrow="Experience / Education"
           title="Work, school, and technical foundation."
         />

@@ -1,6 +1,7 @@
 import { About } from "@/components/about";
 import { Activity } from "@/components/activity";
 import { Blog } from "@/components/blog";
+import { Certificates } from "@/components/certificates";
 import { ContentNav } from "@/components/content-nav";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
@@ -18,6 +19,7 @@ export default function Home() {
       <Projects />
       <About />
       <Activity />
+      <Certificates />
       <Newsletter />
       <Footer />
     </main>

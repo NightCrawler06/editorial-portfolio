@@ -10,10 +10,30 @@ export const profile = {
     "A student and part-time developer creating apps, dashboards, APIs, and automation tools from the Philippines.",
 };
 
+export const socialLinks = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/franc-emmanuel-villavicencio/",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/euel.dev/",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/NightCrawler06/",
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/night.crawler06",
+  },
+];
+
 export const navItems = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Certificates", href: "#certificates" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -148,5 +168,59 @@ export const experience = [
     date: "2022 - 2024",
     detail:
       "Early technical track focused on information and communication technology.",
+  },
+];
+
+export type Certificate = {
+  title: string;
+  issuer: string;
+  image: string;
+};
+
+export const certificates: Certificate[] = [
+  {
+    title: "Microsoft Office Specialist",
+    issuer: "Microsoft",
+    image: "/assets/certs/mos.png",
+  },
+  {
+    title: "Certificate 01",
+    issuer: "Technical certification",
+    image: "/assets/certs/cert-1.jpg",
+  },
+  {
+    title: "Certificate 02",
+    issuer: "Technical certification",
+    image: "/assets/certs/cert-2.jpg",
+  },
+  {
+    title: "Certificate 03",
+    issuer: "Technical certification",
+    image: "/assets/certs/cert-3.jpg",
+  },
+  {
+    title: "Certificate 04",
+    issuer: "Technical certification",
+    image: "/assets/certs/cert-4.jpg",
+  },
+  {
+    title: "Certificate 05",
+    issuer: "Technical certification",
+    image: "/assets/certs/cert-5.jpg",
+  },
+  {
+    title: "Certificate 06",
+    issuer: "Technical certification",
+    image: "/assets/certs/cert-6.jpg",
+  },
+  {
+    title: "Certificate 07",
+    issuer: "Technical certification",
+    image: "/assets/certs/cert-7.jpg",
+  },
+  {
+    title: "Certificate 08",
+    issuer: "Technical certification",
+    image: "/assets/certs/cert-8.png",
   },
 ];

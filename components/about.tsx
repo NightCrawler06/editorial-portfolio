@@ -9,7 +9,7 @@ export function About() {
         <div className="grid gap-10 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>
             <SectionHeading
-              index="03 / 04"
+              index="03 / 05"
               eyebrow="About"
               title="Student developer from the Philippines."
               description="A focused profile on my work, studies, and current developer role."
@@ -50,7 +50,7 @@ export function About() {
               alt="Franc Emmanuel Villavicencio portrait"
               fill
               sizes="(min-width: 1024px) 360px, 100vw"
-              className="object-cover object-top grayscale"
+              className="object-cover object-top "
             />
             <div className="absolute inset-x-0 bottom-0 flex justify-between border-t border-line bg-ink/80 px-4 py-3 text-[10px] uppercase tracking-[0.2em] text-white backdrop-blur">
               <span>{profile.shortName}</span>

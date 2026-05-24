@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HiArrowLeft } from "react-icons/hi2";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { ProjectCard } from "@/components/project-card";
@@ -18,9 +19,10 @@ export default function ProjectsPage() {
         <div className="mx-auto max-w-7xl">
           <Link
             href="/"
-            className="text-[10px] font-bold uppercase tracking-[0.24em] text-muted transition hover:text-muted"
+            className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-muted transition hover:text-muted"
           >
-            &lt;- Back home
+            <HiArrowLeft aria-hidden="true" className="h-4 w-4" />
+            Back home
           </Link>
           <p className="mt-16 text-[10px] font-semibold uppercase tracking-[0.34em] text-muted">
             Project archive / {String(projects.length).padStart(2, "0")}

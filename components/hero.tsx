@@ -1,4 +1,5 @@
 import { navItems, profile } from "@/lib/content";
+import { HiArrowRight } from "react-icons/hi2";
 
 export function Hero() {
   return (
@@ -26,12 +27,13 @@ export function Hero() {
           </a>
           <a
             href="#about"
-            className="inline-flex h-12 items-center justify-center border border-line px-7 text-[10px] font-bold uppercase tracking-[0.26em] text-white transition hover:-translate-y-0.5 hover:border-white hover:text-muted"
+            className="inline-flex h-12 items-center justify-center gap-2 border border-line px-7 text-[10px] font-bold uppercase tracking-[0.26em] text-white transition hover:-translate-y-0.5 hover:border-white hover:text-muted"
           >
-            About Euel -&gt;
+            About Euel
+            <HiArrowRight aria-hidden="true" className="h-4 w-4" />
           </a>
         </div>
-        <div className="mt-12 grid border border-line sm:grid-cols-4">
+        <div className="mt-12 grid border border-line sm:grid-cols-2 lg:grid-cols-5">
           {navItems.map((item, index) => (
             <a
               key={item.href}
@@ -42,7 +44,7 @@ export function Hero() {
                 0{index + 1}
               </span>
               <span className="justify-self-end text-muted transition group-hover:text-ink">
-                -&gt;
+                <HiArrowRight aria-hidden="true" className="h-4 w-4" />
               </span>
               <span className="font-bold">{item.label}</span>
             </a>

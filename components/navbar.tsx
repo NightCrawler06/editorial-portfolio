@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import { HiBars2, HiXMark } from "react-icons/hi2";
 import { navItems, profile } from "@/lib/content";
 
 function BrandMark({ priority = false }: { priority?: boolean }) {
@@ -94,7 +95,7 @@ export function Navbar() {
             className="flex h-11 w-11 items-center justify-center border border-line text-2xl leading-none text-white transition hover:border-white hover:bg-white hover:text-ink"
             onClick={() => setIsOpen(false)}
           >
-            x
+            <HiXMark aria-hidden="true" className="h-6 w-6" />
           </button>
         </div>
 
@@ -175,7 +176,7 @@ export function Navbar() {
           </Link>
           <p className="hidden items-center gap-4 text-[10px] uppercase tracking-[0.28em] text-muted sm:flex">
             <span className="h-px w-24 bg-line" />
-            01 / 04
+            01 / 05
           </p>
           <button
             type="button"
@@ -184,10 +185,7 @@ export function Navbar() {
             aria-expanded={isOpen}
             onClick={() => setIsOpen(true)}
           >
-            <span className="flex flex-col gap-1.5">
-              <span className="block h-px w-4 bg-current" />
-              <span className="block h-px w-4 bg-current" />
-            </span>
+            <HiBars2 aria-hidden="true" className="h-6 w-6" />
           </button>
         </nav>
       </header>
