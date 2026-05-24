@@ -167,7 +167,7 @@ export function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-line bg-ink/92 px-5 py-0 backdrop-blur-md sm:px-10">
-        <nav className="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+        <nav className="grid grid-cols-[auto_1fr_auto] items-center gap-4 sm:grid-cols-[1fr_auto_1fr]">
           <Link
             href={isHome ? "#" : "/"}
             className="-my-6 flex items-center"

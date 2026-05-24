@@ -84,8 +84,8 @@ export function Certificates() {
             </div>
           </div>
 
-          <div className="mx-auto w-full max-w-3xl lg:mx-0 lg:max-w-none">
-            <div className="mb-4 flex items-center justify-between">
+          <div className="mx-auto flex w-full max-w-3xl flex-col items-center lg:mx-0 lg:max-w-none lg:items-stretch">
+            <div className="mb-4 flex w-full items-center justify-between">
               <p className="text-[10px] uppercase tracking-[0.28em] text-muted">
                 {String(activeIndex + 1).padStart(2, "0")} /{" "}
                 {String(certificates.length).padStart(2, "0")}
@@ -110,14 +110,14 @@ export function Certificates() {
               </div>
             </div>
 
-            <div className="mx-auto border border-line bg-black shadow-[0_24px_80px_rgba(0,0,0,0.28)]">
+            <div className="mx-auto w-full max-w-[42rem] border border-line bg-black shadow-[0_24px_80px_rgba(0,0,0,0.28)] sm:max-w-3xl lg:max-w-none">
               <div className="relative h-48 overflow-hidden bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_58%)] min-[420px]:h-56 sm:h-72 lg:h-80">
                 <Image
                   src={active.image}
                   alt={active.title}
                   fill
                   sizes="(min-width: 1024px) 760px, 100vw"
-                  className="object-contain p-3 sm:p-5"
+                  className="object-contain object-center p-3 sm:p-5"
                   priority={activeIndex === 0}
                 />
               </div>
@@ -131,7 +131,7 @@ export function Certificates() {
               </div>
             </div>
 
-            <div className="relative mt-3 overflow-hidden border border-line bg-black">
+            <div className="relative mt-3 w-full max-w-[42rem] overflow-hidden border border-line bg-black sm:max-w-3xl lg:max-w-none">
               <div className="flex gap-px overflow-x-auto p-px [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {certificates.map((certificate, index) => (
                   <button
