@@ -179,48 +179,48 @@ export type Certificate = {
 
 export const certificates: Certificate[] = [
   {
-    title: "Microsoft Office Specialist",
+    title: "Microsoft Office Specialist: Office Word 2016",
     issuer: "Microsoft",
     image: "/assets/certs/mos.png",
   },
   {
-    title: "Certificate 01",
-    issuer: "Technical certification",
+    title: "Data Analysis with Python",
+    issuer: "freeCodeCamp",
     image: "/assets/certs/cert-1.jpg",
   },
   {
-    title: "Certificate 02",
-    issuer: "Technical certification",
+    title: "Data Visualization",
+    issuer: "freeCodeCamp",
     image: "/assets/certs/cert-2.jpg",
   },
   {
-    title: "Certificate 03",
-    issuer: "Technical certification",
+    title: "Front End Development Libraries",
+    issuer: "freeCodeCamp",
     image: "/assets/certs/cert-3.jpg",
   },
   {
-    title: "Certificate 04",
-    issuer: "Technical certification",
+    title: "JavaScript Algorithms and Data Structures (Beta)",
+    issuer: "freeCodeCamp",
     image: "/assets/certs/cert-4.jpg",
   },
   {
-    title: "Certificate 05",
-    issuer: "Technical certification",
+    title: "Legacy JavaScript Algorithms and Data Structures",
+    issuer: "freeCodeCamp",
     image: "/assets/certs/cert-5.jpg",
   },
   {
-    title: "Certificate 06",
-    issuer: "Technical certification",
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp",
     image: "/assets/certs/cert-6.jpg",
   },
   {
-    title: "Certificate 07",
-    issuer: "Technical certification",
+    title: "Scientific Computing with Python",
+    issuer: "freeCodeCamp",
     image: "/assets/certs/cert-7.jpg",
   },
   {
-    title: "Certificate 08",
-    issuer: "Technical certification",
+    title: "Back End Development and APIs",
+    issuer: "freeCodeCamp",
     image: "/assets/certs/cert-8.png",
   },
 ];

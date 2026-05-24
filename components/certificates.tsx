@@ -84,7 +84,7 @@ export function Certificates() {
             </div>
           </div>
 
-          <div>
+          <div className="mx-auto w-full max-w-3xl lg:mx-0 lg:max-w-none">
             <div className="mb-4 flex items-center justify-between">
               <p className="text-[10px] uppercase tracking-[0.28em] text-muted">
                 {String(activeIndex + 1).padStart(2, "0")} /{" "}
@@ -110,18 +110,18 @@ export function Certificates() {
               </div>
             </div>
 
-            <div className="border border-line bg-black shadow-[0_24px_80px_rgba(0,0,0,0.28)]">
+            <div className="mx-auto border border-line bg-black shadow-[0_24px_80px_rgba(0,0,0,0.28)]">
               <div className="relative h-48 overflow-hidden bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_58%)] min-[420px]:h-56 sm:h-72 lg:h-80">
                 <Image
                   src={active.image}
                   alt={active.title}
                   fill
                   sizes="(min-width: 1024px) 760px, 100vw"
-                  className="object-contain p-5"
+                  className="object-contain p-3 sm:p-5"
                   priority={activeIndex === 0}
                 />
               </div>
-              <div className="border-t border-line bg-panel px-5 py-4">
+              <div className="border-t border-line bg-panel px-4 py-4 text-center sm:px-5 sm:text-left">
                 <h3 className="text-sm font-bold uppercase tracking-[0.16em] text-white">
                   {active.title}
                 </h3>

@@ -75,7 +75,7 @@ export function Navbar() {
       />
 
       <aside
-        className={`fixed inset-y-0 right-0 z-[901] flex h-dvh w-full max-w-xl flex-col border-l border-line bg-ink px-7 py-4 shadow-soft transition-[transform,visibility] duration-300 sm:px-10 ${
+        className={`fixed inset-y-0 right-0 z-[901] flex h-dvh w-[min(88vw,36rem)] max-w-xl flex-col border-l border-line bg-ink px-5 py-4 shadow-soft transition-[transform,visibility] duration-300 sm:px-10 ${
           isOpen
             ? "visible translate-x-0"
             : "invisible translate-x-[calc(100%+1px)]"

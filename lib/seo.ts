@@ -7,6 +7,10 @@ export const siteName = "Euel Villavicencio";
 
 export const profileImage = "/assets/euel.png";
 
+export const ogImage = "/assets/og-image.png";
+
+export const ogImageUrl = `${siteUrl}${ogImage}`;
+
 export const siteDescription =
   "Portfolio of Franc Emmanuel Villavicencio, a student and part-time developer from the Philippines building apps, dashboards, APIs, automation tools, and developer utilities.";
 
