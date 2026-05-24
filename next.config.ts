@@ -5,8 +5,8 @@ import { fileURLToPath } from "node:url";
 const root = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  basePath: "/new-portfolio",
+  assetPrefix: "/new-portfolio",
   turbopack: {
     root,
   },
