@@ -50,7 +50,18 @@ body {
 }
 
 .page-transition {
-  animation: page-enter 360ms ease both;
+  animation: page-fade-in 460ms ease both;
+  will-change: opacity;
+}
+
+.route-transition-shell {
+  min-height: 100vh;
+  opacity: 1;
+  transition: opacity 260ms ease;
+}
+
+.route-transition-leave {
+  opacity: 0;
 }
 
 ::selection {
@@ -81,7 +92,7 @@ body {
   }
 }
 
-@keyframes page-enter {
+@keyframes page-fade-in {
   from {
     opacity: 0;
   }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageTransitionProvider } from "@/components/page-transition-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body>{children}</body>
+      <body>
+        <PageTransitionProvider>{children}</PageTransitionProvider>
+      </body>
     </html>
   );
 }
