@@ -33,7 +33,7 @@ export function Certificates() {
   return (
     <section
       id="certificates"
-      className="section-reveal border-b border-line bg-ink px-4 py-20 sm:px-8 lg:px-16"
+      className="section-reveal overflow-hidden border-b border-line bg-ink px-4 py-20 sm:px-8 lg:px-16"
     >
       <div className="mx-auto max-w-7xl">
         <div className="mb-8 flex items-center gap-4">
@@ -84,7 +84,7 @@ export function Certificates() {
             </div>
           </div>
 
-          <div className="mx-auto flex w-full max-w-3xl flex-col items-center lg:mx-0 lg:max-w-none lg:items-stretch">
+          <div className="mx-auto flex w-full min-w-0 max-w-3xl flex-col items-center lg:mx-0 lg:max-w-none lg:items-stretch">
             <div className="mb-4 flex w-full items-center justify-between">
               <p className="text-[10px] uppercase tracking-[0.28em] text-muted">
                 {String(activeIndex + 1).padStart(2, "0")} /{" "}
@@ -110,7 +110,7 @@ export function Certificates() {
               </div>
             </div>
 
-            <div className="mx-auto w-full max-w-[42rem] border border-line bg-black shadow-[0_24px_80px_rgba(0,0,0,0.28)] sm:max-w-3xl lg:max-w-none">
+            <div className="mx-auto w-full min-w-0 max-w-[42rem] border border-line bg-black shadow-[0_24px_80px_rgba(0,0,0,0.28)] sm:max-w-3xl lg:max-w-none">
               <div className="relative h-48 overflow-hidden bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_58%)] min-[420px]:h-56 sm:h-72 lg:h-80">
                 <Image
                   src={active.image}
@@ -122,7 +122,7 @@ export function Certificates() {
                 />
               </div>
               <div className="border-t border-line bg-panel px-4 py-4 text-center sm:px-5 sm:text-left">
-                <h3 className="text-sm font-bold uppercase tracking-[0.16em] text-white">
+                <h3 className="break-words text-xs font-bold uppercase tracking-[0.12em] text-white sm:text-sm sm:tracking-[0.16em]">
                   {active.title}
                 </h3>
                 <p className="mt-2 text-xs uppercase tracking-[0.2em] text-muted">
@@ -131,7 +131,7 @@ export function Certificates() {
               </div>
             </div>
 
-            <div className="relative mt-3 w-full max-w-[42rem] overflow-hidden border border-line bg-black sm:max-w-3xl lg:max-w-none">
+            <div className="relative mt-3 w-full min-w-0 max-w-[42rem] overflow-hidden border border-line bg-black sm:max-w-3xl lg:max-w-none">
               <div className="flex gap-px overflow-x-auto p-px [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {certificates.map((certificate, index) => (
                   <button
