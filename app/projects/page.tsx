@@ -52,7 +52,7 @@ export default function ProjectsPage() {
           <p className="mt-16 text-[10px] font-semibold uppercase tracking-[0.34em] text-muted">
             Project archive / {String(projects.length).padStart(2, "0")}
           </p>
-          <h1 className="mt-6 font-display text-6xl uppercase leading-[0.86] text-white sm:text-7xl md:text-8xl">
+          <h1 className="mt-6 font-display text-5xl uppercase leading-[0.86] text-white min-[380px]:text-6xl sm:text-7xl md:text-8xl">
             All projects
           </h1>
           <div className="mt-8 h-px w-full max-w-[790px] bg-line" />

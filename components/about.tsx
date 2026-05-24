@@ -44,7 +44,7 @@ export function About() {
               ))}
             </dl>
           </div>
-          <div className="relative min-h-[460px] overflow-hidden border border-line bg-panel">
+          <div className="relative min-h-[360px] overflow-hidden border border-line bg-panel sm:min-h-[460px]">
             <Image
               src="/assets/euel.png"
               alt="Franc Emmanuel Villavicencio portrait"

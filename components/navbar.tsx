@@ -15,7 +15,7 @@ function BrandMark({ priority = false }: { priority?: boolean }) {
       alt="Euel"
       width={1036}
       height={1036}
-      className="h-32 w-32 object-contain"
+      className="h-24 w-24 object-contain sm:h-32 sm:w-32"
       priority={priority}
     />
   );
@@ -82,7 +82,7 @@ export function Navbar() {
         }`}
         aria-hidden={!isOpen}
       >
-        <div className="flex h-24 items-center justify-between border-b border-line">
+        <div className="flex h-20 items-center justify-between border-b border-line sm:h-24">
           <Link
             href={isHome ? "#" : "/"}
             className="-my-6 flex items-center"
@@ -118,7 +118,7 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={getHref(item.href)}
-                  className="group grid grid-cols-[44px_1fr_auto] items-center gap-5 py-6"
+                  className="group grid grid-cols-[34px_1fr_auto] items-center gap-4 py-5 sm:grid-cols-[44px_1fr_auto] sm:gap-5 sm:py-6"
                   onClick={(event) => {
                     if (isHome && item.href.startsWith("#")) {
                       event.preventDefault();
@@ -132,7 +132,7 @@ export function Navbar() {
                   <span className="text-sm uppercase tracking-[0.22em] text-muted">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="font-display text-5xl uppercase leading-none text-neutral-400 transition group-hover:text-muted">
+                  <span className="font-display text-4xl uppercase leading-none text-neutral-400 transition group-hover:text-muted sm:text-5xl">
                     {item.label}
                   </span>
                   <span className="h-2 w-2 bg-white opacity-0 transition group-hover:opacity-100" />

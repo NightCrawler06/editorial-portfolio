@@ -10,7 +10,7 @@ function BrandMark() {
       alt="Euel"
       width={1036}
       height={1036}
-      className="h-32 w-32 object-contain"
+      className="h-24 w-24 object-contain sm:h-32 sm:w-32"
     />
   );
 }

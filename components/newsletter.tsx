@@ -55,7 +55,7 @@ export function Newsletter() {
           <span className="h-3 w-14 bg-[repeating-linear-gradient(115deg,#f5f5f5_0_2px,transparent_2px_6px)] opacity-80" />
         </div>
 
-        <h2 className="font-display text-5xl uppercase leading-[0.88] text-white sm:text-6xl">
+        <h2 className="font-display text-4xl uppercase leading-[0.88] text-white sm:text-6xl">
           Work with me
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-neutral-300">

@@ -49,7 +49,7 @@ export function Certificates() {
             <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.34em] text-muted">
               Certificates / Learning
             </p>
-            <h2 className="font-display max-w-xl text-5xl uppercase leading-[0.88] text-white sm:text-6xl">
+            <h2 className="font-display max-w-xl text-4xl uppercase leading-[0.9] text-white sm:text-6xl">
               Proof of practice.
             </h2>
             <p className="mt-5 max-w-lg text-sm leading-6 text-neutral-300">
@@ -111,7 +111,7 @@ export function Certificates() {
             </div>
 
             <div className="border border-line bg-black shadow-[0_24px_80px_rgba(0,0,0,0.28)]">
-              <div className="relative h-56 overflow-hidden bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_58%)] sm:h-72 lg:h-80">
+              <div className="relative h-48 overflow-hidden bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_58%)] min-[420px]:h-56 sm:h-72 lg:h-80">
                 <Image
                   src={active.image}
                   alt={active.title}
@@ -142,7 +142,7 @@ export function Certificates() {
                     key={`${certificate.title}-${certificate.image}`}
                     aria-label={`Show ${certificate.title}`}
                     onClick={() => setActiveIndex(index)}
-                    className={`relative h-16 min-w-[calc((100%-5px)/6)] bg-panel transition duration-300 ${
+                    className={`relative h-14 min-w-24 bg-panel transition duration-300 sm:h-16 sm:min-w-[calc((100%-5px)/6)] ${
                       activeIndex === index
                         ? "opacity-100 ring-1 ring-inset ring-white"
                         : "opacity-45 hover:opacity-85"
