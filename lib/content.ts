@@ -67,7 +67,7 @@ export const projects: Project[] = [
     description:
       "Role-based management dashboard with organized data views and full CRUD workflows.",
     tags: ["MongoDB", "Express", "React", "Node"],
-    href: "https://admin-dashboard-7812.onrender.com/",
+    href: "https://github.com/NightCrawler06/admin-dashboard",
     image: "/assets/projects-pics/admin-dashboard.png",
   },
   {
