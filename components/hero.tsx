@@ -5,13 +5,13 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="fine-grid grid min-h-[calc(100svh-57px)] content-center border-b border-line px-5 py-16 sm:px-10 sm:py-20 lg:px-16"
+      className="fine-grid grid min-h-[calc(100svh-57px)] overflow-hidden border-b border-line px-5 py-16 sm:content-center sm:px-10 sm:py-20 lg:px-16"
     >
       <div className="mx-auto w-full max-w-[1190px]">
         <p className="mb-7 text-[10px] font-semibold uppercase tracking-[0.34em] text-muted">
           {profile.role}
         </p>
-        <h1 className="font-display max-w-5xl text-5xl uppercase leading-[0.86] text-white min-[380px]:text-6xl sm:text-7xl md:text-8xl">
+        <h1 className="font-display max-w-5xl break-words text-[clamp(3rem,14vw,4.2rem)] uppercase leading-[0.86] text-white sm:text-7xl md:text-8xl">
           {profile.headline}
         </h1>
         <div className="mt-8 h-px w-full max-w-[790px] bg-line" />

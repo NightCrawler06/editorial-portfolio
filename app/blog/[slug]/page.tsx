@@ -118,7 +118,7 @@ export default async function PostPage({ params }: PostPageProps) {
               Back to blog
             </Link>
 
-            <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_420px] lg:items-end">
+            <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_420px] lg:items-center">
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.34em] text-muted">
                   {post.readingTime} /{" "}
@@ -149,14 +149,14 @@ export default async function PostPage({ params }: PostPageProps) {
               </div>
 
               {post.cover ? (
-                <div className="relative aspect-[1.35] overflow-hidden border border-line bg-panel">
+                <div className="relative aspect-[1.91] overflow-hidden border border-line bg-black">
                   <Image
                     src={post.cover}
                     alt=""
                     fill
                     priority
                     sizes="(min-width: 1024px) 420px, 100vw"
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
               ) : null}
