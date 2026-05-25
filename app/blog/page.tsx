@@ -55,8 +55,8 @@ export default function BlogPage() {
           </h1>
           <div className="mt-8 h-px w-full max-w-[790px] bg-line" />
           <p className="mt-7 max-w-2xl text-base leading-7 text-neutral-200">
-            Notes on projects, systems, learning, and the real work behind
-            building useful software.
+            Notes from building projects, learning software, and documenting
+            the process as a student and part-time developer.
           </p>
           <div className="mt-7 flex flex-wrap gap-2">
             {tags.map((tag) => (

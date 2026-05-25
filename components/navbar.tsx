@@ -190,10 +190,10 @@ export function Navbar() {
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-line bg-ink/92 px-5 py-0 backdrop-blur-md sm:px-10">
-        <nav className="grid grid-cols-[auto_1fr_auto] items-center gap-4 sm:grid-cols-[1fr_auto_1fr]">
+        <nav className="relative flex items-center justify-between gap-4">
           <Link
             href={isHome ? "#" : "/"}
-            className="-my-6 flex items-center"
+            className="-my-5 flex w-fit shrink-0 items-center"
             onClick={(event) => {
               if (isHome) {
                 event.preventDefault();
@@ -206,7 +206,7 @@ export function Navbar() {
           >
             <BrandMark priority />
           </Link>
-          <p className="hidden items-center gap-4 text-[10px] uppercase tracking-[0.28em] text-muted sm:flex">
+          <p className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-4 text-[10px] uppercase tracking-[0.28em] text-muted sm:flex">
             <span className="h-px w-24 bg-line" />
             01 / 05
           </p>
