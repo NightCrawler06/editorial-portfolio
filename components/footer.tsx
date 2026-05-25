@@ -10,7 +10,7 @@ function BrandMark() {
       alt="Euel"
       width={1036}
       height={1036}
-      className="h-24 w-24 object-contain sm:h-32 sm:w-32"
+      className="h-20 w-20 object-contain sm:h-28 sm:w-28"
     />
   );
 }
@@ -26,12 +26,12 @@ export function Footer() {
   return (
     <footer className="border-t border-line bg-ink px-4 py-6 text-[10px] uppercase tracking-[0.22em] text-muted sm:px-8 lg:px-16">
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-          <a href="#" className="-my-8 flex items-center gap-3 font-bold text-white">
+        <div className="flex items-center justify-between gap-5">
+          <a href="#" className="-my-6 flex w-fit items-center gap-3 font-bold text-white sm:-my-8">
             <BrandMark />
           </a>
 
-          <div className="flex flex-wrap gap-2 sm:gap-3">
+          <div className="flex flex-wrap justify-end gap-2 sm:gap-3">
             {socialLinks.map((social) => {
               const Icon = icons[social.label];
 

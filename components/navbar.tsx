@@ -24,7 +24,7 @@ function BrandMark({ priority = false }: { priority?: boolean }) {
       alt="Euel"
       width={1036}
       height={1036}
-      className="h-24 w-24 object-contain sm:h-32 sm:w-32"
+      className="h-20 w-20 object-contain sm:h-24 sm:w-24"
       priority={priority}
     />
   );
@@ -94,7 +94,7 @@ export function Navbar() {
         <div className="flex h-20 items-center justify-between border-b border-line sm:h-24">
           <Link
             href={isHome ? "#" : "/"}
-            className="-my-6 flex items-center"
+            className="-my-5 flex w-fit items-center justify-self-start"
             onClick={(event) => {
               if (isHome) {
                 event.preventDefault();

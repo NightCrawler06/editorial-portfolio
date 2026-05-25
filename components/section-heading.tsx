@@ -12,16 +12,16 @@ export function SectionHeading({
   index,
 }: SectionHeadingProps) {
   return (
-    <div className="mb-9 grid gap-5 sm:grid-cols-[110px_1fr]">
+    <div className="mb-7 grid gap-4 sm:mb-9 sm:grid-cols-[110px_1fr] sm:gap-5">
       <div className="text-[10px] uppercase tracking-[0.24em] text-muted">
         <span>{index}</span>
         <span className="ml-3 inline-block h-px w-9 bg-white align-middle" />
       </div>
       <div className="max-w-3xl">
-        <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-muted">
+        <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-muted sm:tracking-[0.28em]">
           {eyebrow}
         </p>
-        <h2 className="font-display text-4xl uppercase leading-[0.9] text-white sm:text-5xl">
+        <h2 className="font-display text-3xl uppercase leading-[0.9] text-white sm:text-5xl">
           {title}
         </h2>
       </div>
