@@ -127,7 +127,7 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
   return (
     <div
       className={`route-transition-shell ${isLeaving ? "route-transition-leave" : ""}`}
-      onClick={handleClick}
+      onClickCapture={handleClick}
     >
       {children}
     </div>

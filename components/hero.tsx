@@ -26,10 +26,10 @@ export function Hero() {
             Explore the work
           </a>
           <a
-            href="#about"
+            href="/blog"
             className="inline-flex h-12 items-center justify-center gap-2 border border-line px-7 text-[10px] font-bold uppercase tracking-[0.26em] text-white transition hover:-translate-y-0.5 hover:border-white hover:text-muted"
           >
-            About Euel
+            Read the blog
             <HiArrowRight aria-hidden="true" className="h-4 w-4" />
           </a>
         </div>
