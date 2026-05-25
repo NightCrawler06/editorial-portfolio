@@ -49,6 +49,76 @@ body {
   background-size: 10px 10px;
 }
 
+.blog-prose {
+  color: #d4d4d4;
+}
+
+.blog-prose > * {
+  min-width: 0;
+}
+
+.blog-prose h2,
+.blog-prose h3,
+.blog-prose h4 {
+  position: relative;
+  margin-top: 1.6rem;
+}
+
+.heading-anchor {
+  position: absolute;
+  right: calc(100% + 0.75rem);
+  color: #b7b7b7;
+  opacity: 0;
+  text-decoration: none;
+  transition: opacity 180ms ease, color 180ms ease;
+}
+
+.blog-prose h2:hover .heading-anchor,
+.blog-prose h3:hover .heading-anchor,
+.blog-prose h4:hover .heading-anchor,
+.heading-anchor:focus {
+  opacity: 1;
+  color: #f6f7f9;
+}
+
+.blog-prose code:not(pre code) {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #151515;
+  padding: 0.12rem 0.32rem;
+  color: #f6f7f9;
+  font-size: 0.9em;
+}
+
+.blog-prose [data-rehype-pretty-code-figure] {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0b0d10;
+}
+
+.blog-prose [data-rehype-pretty-code-title] {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #151515;
+  padding: 0.75rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b7b7b7;
+}
+
+.blog-prose pre {
+  margin: 0;
+  overflow-x: auto;
+  padding: 1rem;
+  font-size: 0.86rem;
+  line-height: 1.8;
+}
+
+.blog-prose pre code {
+  display: grid;
+  min-width: max-content;
+}
+
 .page-transition {
   animation: page-fade-in 460ms ease both;
   will-change: opacity;

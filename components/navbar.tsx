@@ -5,8 +5,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import type { IconType } from "react-icons";
+import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import { HiBars2, HiXMark } from "react-icons/hi2";
-import { navItems, profile } from "@/lib/content";
+import { profile, socialLinks } from "@/lib/content";
+
+const icons: Record<string, IconType> = {
+  LinkedIn: FaLinkedinIn,
+  Instagram: FaInstagram,
+  GitHub: FaGithub,
+  Facebook: FaFacebookF,
+};
 
 function BrandMark({ priority = false }: { priority?: boolean }) {
   return (
@@ -113,7 +122,7 @@ export function Navbar() {
             Navigate / 00
           </p>
           <div className="divide-y divide-line">
-            {[{ label: "Home", href: "#" }, ...navItems].map(
+            {[{ label: "Home", href: "#" }, { label: "Blog", href: "/blog" }].map(
               (item, index) => (
                 <Link
                   key={item.href}
@@ -146,17 +155,31 @@ export function Navbar() {
           <p className="text-[10px] uppercase tracking-[0.34em] text-muted">
             Connect
           </p>
-          <div className="mt-5 flex flex-wrap gap-4 text-xs uppercase tracking-[0.18em] text-muted">
+          <div className="mt-5 flex flex-wrap gap-2">
+            {socialLinks.map((social) => {
+              const Icon = icons[social.label];
+
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={social.label}
+                  title={social.label}
+                  className="group flex h-10 w-10 items-center justify-center border border-line text-muted transition hover:border-white hover:bg-white hover:text-ink"
+                >
+                  <Icon className="h-4 w-4 transition group-hover:scale-110" />
+                </a>
+              );
+            })}
             <a
-              href={profile.github}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-muted"
+              href={`mailto:${profile.email}`}
+              aria-label="Email"
+              title="Email"
+              className="group flex h-10 w-10 items-center justify-center border border-line text-muted transition hover:border-white hover:bg-white hover:text-ink"
             >
-              GitHub
-            </a>
-            <a href={`mailto:${profile.email}`} className="hover:text-muted">
-              Email
+              @
             </a>
           </div>
         </div>

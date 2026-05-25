@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { ProjectCard } from "@/components/project-card";
 import { projects } from "@/lib/content";
-import { siteDescription, siteName } from "@/lib/seo";
+import { ogImageUrl, siteDescription, siteName, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     title: `Projects / ${siteName}`,
     description:
       "Explore Euel Villavicencio's apps, dashboards, APIs, mobile experiments, and developer utilities.",
-    url: "/projects",
+    url: `${siteUrl}/projects`,
     images: [
       {
-        url: "/opengraph-image",
+        url: ogImageUrl,
         width: 1200,
         height: 630,
         alt: `${siteName} projects preview`,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `Projects / ${siteName}`,
     description: siteDescription,
-    images: ["/opengraph-image"],
+    images: [ogImageUrl],
   },
 };
 
