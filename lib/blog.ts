@@ -131,7 +131,12 @@ export function getAllPosts(): BlogPost[] {
 }
 
 export function getPostSummaries(): BlogPostSummary[] {
-  return getAllPosts().map(({ content: _content, ...post }) => post);
+  return getAllPosts().map((post) => {
+    const summary = { ...post } as Partial<BlogPost>;
+    delete summary.content;
+
+    return summary as BlogPostSummary;
+  });
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {

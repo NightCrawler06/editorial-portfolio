@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/assets/logo.png",
-    shortcut: "/assets/logo.png",
+    icon: "/logo.ico",
+    shortcut: "/logo.ico",
     apple: "/assets/logo.png",
   },
   openGraph: {

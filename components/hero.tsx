@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { navItems, profile } from "@/lib/content";
 import { HiArrowRight } from "react-icons/hi2";
 
@@ -25,13 +26,13 @@ export function Hero() {
           >
             Explore the work
           </a>
-          <a
+          <Link
             href="/blog"
             className="inline-flex h-12 min-w-0 items-center justify-center gap-2 border border-line px-5 text-center text-[10px] font-bold uppercase tracking-[0.18em] text-white transition hover:-translate-y-0.5 hover:border-white hover:text-muted sm:px-7 sm:tracking-[0.26em]"
           >
             Read the blog
             <HiArrowRight aria-hidden="true" className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
         <div className="mt-10 grid min-w-0 overflow-hidden border border-line sm:mt-12 sm:grid-cols-2 lg:grid-cols-5">
           {navItems.map((item, index) => (

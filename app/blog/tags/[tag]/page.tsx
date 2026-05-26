@@ -58,6 +58,12 @@ export async function generateMetadata({
 export default async function TagPage({ params }: TagPageProps) {
   const { tag } = await params;
   const posts = getPostsByTag(tag);
+  const postSummaries = posts.map((post) => {
+    const summary = { ...post } as Partial<typeof post>;
+    delete summary.content;
+
+    return summary as Omit<typeof post, "content">;
+  });
   const label = posts[0]?.tags?.find(
     (postTag) => postTag.toLowerCase() === decodeURIComponent(tag).toLowerCase(),
   );
@@ -89,7 +95,7 @@ export default async function TagPage({ params }: TagPageProps) {
 
       <section className="px-4 py-16 sm:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <BlogSearch posts={posts.map(({ content: _content, ...post }) => post)} activeTag={label} />
+          <BlogSearch posts={postSummaries} activeTag={label} />
         </div>
       </section>
       <Footer />

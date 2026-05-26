@@ -23,7 +23,7 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
   }, []);
 
   useEffect(() => {
-    setIsLeaving(false);
+    const resetFrame = requestAnimationFrame(() => setIsLeaving(false));
 
     const scrollToTop = () => {
       const root = document.documentElement;
@@ -56,6 +56,7 @@ export function PageTransitionProvider({ children }: PageTransitionProviderProps
     );
 
     return () => {
+      cancelAnimationFrame(resetFrame);
       scrollTimeouts.forEach(clearTimeout);
 
       if (timeoutRef.current) {
