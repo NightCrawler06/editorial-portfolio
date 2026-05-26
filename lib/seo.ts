@@ -1,7 +1,7 @@
 import { profile, socialLinks } from "./content";
 
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://euel-editorial-portfolio.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://euel.dev";
 
 export const siteName = "Euel Villavicencio";
 

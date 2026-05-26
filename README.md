@@ -17,17 +17,12 @@ Open `http://localhost:3000`.
 npm run build
 ```
 
-## Deploy under `/new-portfolio`
+## Deploy
 
-Deploy this folder as its own Vercel project with the root directory set to
-`editorial-portfolio`.
+Deploy this folder as the main Vercel project for `euel.dev`.
 
 Set this environment variable in that Vercel project:
 
 ```bash
-NEXT_PUBLIC_BASE_PATH=/new-portfolio
+NEXT_PUBLIC_SITE_URL=https://euel.dev
 ```
-
-Then update the root `vercel.json` in the main portfolio project so
-`YOUR_EDITORIAL_PORTFOLIO_PROJECT.vercel.app` points to this project's Vercel
-deployment URL.
